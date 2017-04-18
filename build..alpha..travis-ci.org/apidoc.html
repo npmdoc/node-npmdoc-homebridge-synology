@@ -1,0 +1,846 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/stfnhmplr/homebridge-synology#readme"
+
+    >homebridge-synology (v0.2.2)</a>
+</h1>
+<h4>Synology Diskstation support for Homebridge: https://github.com/nfarina/homebridge</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-synology">module homebridge-synology</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.homebridge-synology">
+            function <span class="apidocSignatureSpan"></span>homebridge-synology
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology">
+            function <span class="apidocSignatureSpan">homebridge-synology.</span>synology
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.toString">
+            function <span class="apidocSignatureSpan">homebridge-synology.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-synology.</span>synology.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-synology.synology">module homebridge-synology.synology</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.synology">
+            function <span class="apidocSignatureSpan">homebridge-synology.</span>synology
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-synology.synology.prototype">module homebridge-synology.synology.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype._login">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>_login
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.getCpuLoad">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getCpuLoad
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.getDiskTemp">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getDiskTemp
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.getDiskUsage">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getDiskUsage
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.getPowerState">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getPowerState
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.getSystemTemp">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getSystemTemp
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.isLoggedIn">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>isLoggedIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.shutdown">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>shutdown
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.synology.prototype.wakeUp">
+            function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>wakeUp
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-synology" id="apidoc.module.homebridge-synology">module homebridge-synology</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.homebridge-synology" id="apidoc.element.homebridge-synology.homebridge-synology">
+        function <span class="apidocSignatureSpan"></span>homebridge-synology
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">homebridge-synology = function (homebridge) {
+    Service = homebridge.hap.Service;
+    Characteristic = homebridge.hap.Characteristic;
+
+    fixInheritance(SynologyAccessory.CpuLoad, Characteristic);
+    fixInheritance(SynologyAccessory.DiskUsage, Characteristic);
+    fixInheritance(SynologyAccessory.StatsService, Service);
+
+    homebridge.registerAccessory(&#x27;homebridge-synology&#x27;, &#x27;Synology&#x27;, SynologyAccessory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology" id="apidoc.element.homebridge-synology.synology">
+        function <span class="apidocSignatureSpan">homebridge-synology.</span>synology
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">synology = function (params) {
+    this.ip = params.ip;
+    this.mac = params.mac;
+    this.secure = params.secure || false;
+    this.port = params.port || (this.secure ? 5001 : 5000);
+    this.timeout = parseInt(params.timeout) || 5000; //request timeout
+    this.version = parseInt(params.version) ||  6;
+
+    this.user = params.user;
+    this.passwd = params.passwd;
+    this.auth = {
+        sid: &#x27;&#x27;, //session id
+        time: &#x27;&#x27;, //unix time
+        timeout: 15 * 60 //in sec
+    };
+
+    this.url = &#x27;http&#x27; + (this.secure ? &#x27;s&#x27; : &#x27;&#x27;) + &#x27;://&#x27; + this.ip + &#x27;:&#x27; + this.port;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.toString" id="apidoc.element.homebridge-synology.toString">
+        function <span class="apidocSignatureSpan">homebridge-synology.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    timeout: that.timeout,
+    qs: {
+        api: &#x27;SYNO.API.Auth&#x27;,
+        method: &#x27;login&#x27;,
+        version: 3,
+        account: that.user,
+        passwd: that.passwd,
+        session: &#x27;homebridge-synology-&#x27; + Math.random().<span class="apidocCodeKeywordSpan">toString</span>(36).replace
+(/[^a-z]+/g, &#x27;&#x27;).substr(0, 10),
+        format: &#x27;sid&#x27;
+    }
+};
+
+request.get(options, function(err, res, body) {
+    if(!err) {
+        var json = JSON.parse(body);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-synology.synology" id="apidoc.module.homebridge-synology.synology">module homebridge-synology.synology</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.synology" id="apidoc.element.homebridge-synology.synology.synology">
+        function <span class="apidocSignatureSpan">homebridge-synology.</span>synology
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">synology = function (params) {
+    this.ip = params.ip;
+    this.mac = params.mac;
+    this.secure = params.secure || false;
+    this.port = params.port || (this.secure ? 5001 : 5000);
+    this.timeout = parseInt(params.timeout) || 5000; //request timeout
+    this.version = parseInt(params.version) ||  6;
+
+    this.user = params.user;
+    this.passwd = params.passwd;
+    this.auth = {
+        sid: &#x27;&#x27;, //session id
+        time: &#x27;&#x27;, //unix time
+        timeout: 15 * 60 //in sec
+    };
+
+    this.url = &#x27;http&#x27; + (this.secure ? &#x27;s&#x27; : &#x27;&#x27;) + &#x27;://&#x27; + this.ip + &#x27;:&#x27; + this.port;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-synology.synology.prototype" id="apidoc.module.homebridge-synology.synology.prototype">module homebridge-synology.synology.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype._login" id="apidoc.element.homebridge-synology.synology.prototype._login">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>_login
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_login = function () {
+    var that = this;
+
+    return new Promise(function(resolve, reject) {
+        if(that.isLoggedIn()) {
+            resolve(&#x22;Still logged in&#x22;)
+        } else {
+            var options = {
+                url: that.url + &#x27;/webapi/auth.cgi&#x27;,
+                timeout: that.timeout,
+                qs: {
+                    api: &#x27;SYNO.API.Auth&#x27;,
+                    method: &#x27;login&#x27;,
+                    version: 3,
+                    account: that.user,
+                    passwd: that.passwd,
+                    session: &#x27;homebridge-synology-&#x27; + Math.random().toString(36).replace(/[^a-z]+/g, &#x27;&#x27;).substr(0, 10),
+                    format: &#x27;sid&#x27;
+                }
+            };
+
+            request.get(options, function(err, res, body) {
+                if(!err) {
+                    var json = JSON.parse(body);
+                    that.auth.sid = json.data.sid;
+                    that.auth.time = (new Date / 1e3 | 0);
+                    resolve(&#x22;Login successfull&#x22;);
+                } else {
+                    reject(&#x22;Can&#x27;t Login to Diskstation&#x22;)
+                }
+            });
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Shutdown your Diskstation
+ * @param callback
+ */
+Synology.prototype.shutdown = function(callback) {
+    var that = this;
+
+    that.<span class="apidocCodeKeywordSpan">_login</span>().then(function() {
+var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/system.cgi&#x27;;
+
+var options = {
+    url: that.url + apiUrl,
+    qs: {
+        api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System&#x27; : &#x27;SYNO.DSM.System&#x27;,
+        version: 1,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.getCpuLoad" id="apidoc.element.homebridge-synology.synology.prototype.getCpuLoad">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getCpuLoad
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCpuLoad = function (callback) {
+    var that = this;
+
+    that._login().then(function() {
+
+        var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/system_loading.cgi&#x27;;
+        var options = {
+            url: that.url + apiUrl,
+            qs: {
+                api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System.Utilization&#x27; : &#x27;SYNO.DSM.SystemLoading&#x27;,
+                version: 1,
+                method: (that.version &#x3e;= 6) ? &#x27;get&#x27; : &#x27;getinfo&#x27;,
+                type: &#x27;current&#x27;,
+                resource: [&#x27;cpu&#x27;],
+                _sid: that.auth.sid
+            },
+            method: &#x27;GET&#x27;
+        };
+
+        request(options, function(err, res, body) {
+            if (!err &#x26;&#x26; res.statusCode == 200) {
+                var json = JSON.parse(body);
+                if (json.success) {
+                    if (that.version &#x3e;= 6) {
+                        var load = json.data.cpu[&#x27;other_load&#x27;] +
+                            json.data.cpu[&#x27;system_load&#x27;] +
+                            json.data.cpu[&#x27;user_load&#x27;];
+                    } else {
+                        load = Math.round(json.data.cpu.user * 100);
+                    }
+                    callback(null, load);
+                } else {
+                    callback(&#x22;An error occured while getting CpuLoad: &#x22; + json.error.code);
+                }
+            } else {
+                callback(&#x22;An error occured while getting CpuLoad: &#x22; + err);
+            }
+        });
+    }).catch(function(err) {
+        callback(&#x22;An error occured while getting CpuLoad: &#x22; + err);
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+};
+
+
+SynologyAccessory.prototype.getCpuLoad = function (callback) {
+var that = this;
+
+that.synology.<span class="apidocCodeKeywordSpan">getCpuLoad</span>(function (err, data) {
+    if (!err) {
+        that.log(&#x27;current cpu load: %s %&#x27;, data);
+        callback(null, data);
+    } else {
+        that.log(err);
+        callback(null, 0); //testing
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.getDiskTemp" id="apidoc.element.homebridge-synology.synology.prototype.getDiskTemp">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getDiskTemp
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDiskTemp = function (callback) {
+    var that = this;
+
+    that._login().then(function(res) {
+        var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/info.cgi&#x27;;
+        var options = {
+            url: that.url + apiUrl,
+            qs: {
+                api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System&#x27; : &#x27;&#x27;,
+                version: 1,
+                method: (that.version &#x3e;= 6) ? &#x27;info&#x27; : &#x27;getinfo&#x27;,
+                type: &#x27;storage&#x27;,
+                _sid: that.auth.sid
+            },
+            method: &#x27;GET&#x27;
+        };
+
+        request(options, function(err, res, body) {
+            if (!err &#x26;&#x26; res.statusCode == 200) {
+                var json = JSON.parse(body);
+                if (json.success) {
+                    var temp = 0;
+                    for (var i = json.data.hdd_info.length; i--;) {
+                        temp += json.data.hdd_info[i].temp;
+                    }
+                    temp = Math.round(temp / json.data.hdd_info.length);
+                    callback(null, temp);
+                } else {
+                    callback(err);
+                }
+            } else {
+                callback(err);
+            }
+        });
+    }).catch(function(err) {
+        callback(err);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+request(options, function(err, res, body) {
+    if (!err &#x26;&#x26; res.statusCode == 200) {
+        var json = JSON.parse(body);
+        if (json.success &#x26;&#x26; typeof json.data.temperature !== &#x27;undefined&#x27;) {
+            callback(null, json.data.temperature);
+        } else {
+            that.<span class="apidocCodeKeywordSpan">getDiskTemp</span>(function(error, data) {
+                if(!error) {
+                    callback(null, data)
+                } else {
+                    callback(&#x22;An error occured while getting SystemTemp: &#x22; + error)
+                }
+            });
+        }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.getDiskUsage" id="apidoc.element.homebridge-synology.synology.prototype.getDiskUsage">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getDiskUsage
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDiskUsage = function (callback) {
+    var that = this;
+
+    that._login().then(function() {
+        var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/volume.cgi&#x27;;
+        var options = {
+            url: that.url + apiUrl,
+            qs: {
+                api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System&#x27; : &#x27;SYNO.DSM.Volume&#x27;,
+                version: 1,
+                method: (that.version &#x3e;= 6) ? &#x27;info&#x27; : &#x27;list&#x27;,
+                type: &#x27;storage&#x27;, //only dsm &#x3e;= 6
+                _sid: that.auth.sid
+            },
+            method: &#x27;GET&#x27;
+        };
+
+        request(options, function(err, res, body) {
+            if (!err &#x26;&#x26; res.statusCode == 200) {
+                var json = JSON.parse(body);
+
+                //dsm version 5.x
+                if (json.success &#x26;&#x26; that.version &#x3c; 6) {
+                    var used = 0,
+                        total = 0;
+                    for (var i = json.data.volumes.length; i--;) {
+                        used += json.data.volumes[i].used;
+                        total += json.data.volumes[i].total;
+                    }
+                    callback(null, Math.round(used / total * 100));
+
+                    //dsm version 6.x
+                } else if (json.success &#x26;&#x26; that.version &#x3e;= 6) {
+                    var used = 0,
+                        total = 0;
+                    for (var i = json.data.vol_info.length; i--;) {
+                        used += json.data.vol_info[i].used_size;
+                        total += json.data.vol_info[i].total_size;
+                    }
+                    callback(null, Math.round(used / total * 100));
+
+                } else {
+                    callback(&#x22;An error occured while getting DiskUsage: &#x22; + json.error.code);
+                }
+            } else {
+                callback(&#x22;An error occured while getting DiskUsage: &#x22; + err);
+            }
+        });
+    }).catch(function(err) {
+        callback(err);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+};
+
+
+SynologyAccessory.prototype.getDiskUsage = function (callback) {
+var that = this;
+
+that.synology.<span class="apidocCodeKeywordSpan">getDiskUsage</span>(function (err, data) {
+    if (!err) {
+        that.log(&#x27;current volume usage: %s %&#x27;, data);
+        callback(null, data);
+    } else {
+        that.log(err);
+        callback(null, 0); //testing
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.getPowerState" id="apidoc.element.homebridge-synology.synology.prototype.getPowerState">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getPowerState
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPowerState = function (callback) {
+    that = this;
+
+    var options = {
+        url: that.url + &#x27;/webman/index.cgi&#x27;,
+        method: &#x27;GET&#x27;,
+        timeout: that.timeout
+    }
+
+    request(options, function(err, res) {
+        if (!err &#x26;&#x26; res.statusCode == 200) {
+            callback(null, true);
+        } else {
+            callback(null, false);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.addOptionalCharacteristic(new SynologyAccessory.CpuLoad());
+};
+
+
+SynologyAccessory.prototype.getPowerState = function (callback) {
+var that = this;
+
+that.synology.<span class="apidocCodeKeywordSpan">getPowerState</span>(function (err, state) {
+    if (!err) {
+        that.log(&#x27;current power state is: &#x27; + state);
+        callback(null, state);
+    } else {
+        that.log(err);
+        callback(err);
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.getSystemTemp" id="apidoc.element.homebridge-synology.synology.prototype.getSystemTemp">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>getSystemTemp
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSystemTemp = function (callback) {
+    var that = this;
+
+    that._login().then(function() {
+        var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/info.cgi&#x27;;
+        var options = {
+            url: that.url + apiUrl,
+            qs: {
+                api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System&#x27; : &#x27;SYNO.DSM.Info&#x27;,
+                version: 1,
+                method: (that.version &#x3e;= 6) ? &#x27;info&#x27; : &#x27;getinfo&#x27;,
+                _sid: that.auth.sid
+            },
+            method: &#x27;GET&#x27;
+        };
+        request(options, function(err, res, body) {
+            if (!err &#x26;&#x26; res.statusCode == 200) {
+                var json = JSON.parse(body);
+                if (json.success &#x26;&#x26; typeof json.data.temperature !== &#x27;undefined&#x27;) {
+                    callback(null, json.data.temperature);
+                } else {
+                    that.getDiskTemp(function(error, data) {
+                        if(!error) {
+                            callback(null, data)
+                        } else {
+                            callback(&#x22;An error occured while getting SystemTemp: &#x22; + error)
+                        }
+                    });
+                }
+            } else {
+                callback(&#x22;An error occured while getting SystemTemp: &#x22; + err);
+            }
+        });
+    }).catch(function(err) {
+        callback(&#x22;An error occured while getting SystemTemp: &#x22; + err);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+});
+};
+
+
+SynologyAccessory.prototype.getSystemTemp = function (callback) {
+var that = this;
+that.synology.<span class="apidocCodeKeywordSpan">getSystemTemp</span>(function (err, data) {
+    if (!err) {
+        that.log(&#x27;current system temp: %s °C&#x27;, data);
+        callback(null, data);
+    } else {
+        that.log(err);
+        callback(null, 0); //testing
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.isLoggedIn" id="apidoc.element.homebridge-synology.synology.prototype.isLoggedIn">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>isLoggedIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLoggedIn = function () {
+    return (this.auth.sid &#x26;&#x26; (this.auth.time + this.auth.timeout) &#x3e; (new Date / 1e3 | 0)) ? true : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Login to your diskstation
+ * @return {Promise}
+ */
+Synology.prototype._login = function() {
+var that = this;
+
+return new Promise(function(resolve, reject) {
+    if(that.<span class="apidocCodeKeywordSpan">isLoggedIn</span>()) {
+        resolve(&#x22;Still logged in&#x22;)
+    } else {
+        var options = {
+            url: that.url + &#x27;/webapi/auth.cgi&#x27;,
+            timeout: that.timeout,
+            qs: {
+                api: &#x27;SYNO.API.Auth&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.shutdown" id="apidoc.element.homebridge-synology.synology.prototype.shutdown">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>shutdown
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shutdown = function (callback) {
+    var that = this;
+
+    that._login().then(function() {
+        var apiUrl = (that.version &#x3e;= 6) ? &#x27;/webapi/entry.cgi&#x27; : &#x27;/webapi/dsm/system.cgi&#x27;;
+
+        var options = {
+            url: that.url + apiUrl,
+            qs: {
+                api: (that.version &#x3e;= 6) ? &#x27;SYNO.Core.System&#x27; : &#x27;SYNO.DSM.System&#x27;,
+                version: 1,
+                method: &#x27;shutdown&#x27;,
+                _sid: that.auth.sid
+            },
+            method: &#x27;GET&#x27;,
+        };
+
+        request(options, function(err, res, body) {
+            (!err &#x26;&#x26; res.statusCode == 200 &#x26;&#x26; JSON.parse(body).success) ? callback(null): callback(err);
+        });
+    }).catch(function(err) {
+        callback(err);
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            that.log(&#x27;Something went wrong: &#x27; + err);
+            callback(err);
+        }
+    });
+}
+
+else { //turn off
+    that.synology.<span class="apidocCodeKeywordSpan">shutdown</span>(function (err) {
+        if (!err) {
+            that.log(&#x22;Shutting down Diskstation&#x22;)
+            callback(null);
+        } else {
+            that.log(&#x22;Error shutting down your Diskstation&#x22;)
+            callback(err);
+        }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-synology.synology.prototype.wakeUp" id="apidoc.element.homebridge-synology.synology.prototype.wakeUp">
+        function <span class="apidocSignatureSpan">homebridge-synology.synology.prototype.</span>wakeUp
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wakeUp = function (callback) {
+    var that = this;
+
+    wol.wake(that.mac, function(err) {
+        if (!err) {
+            callback(null)
+        } else {
+            callback(err);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+
+SynologyAccessory.prototype.setPowerState = function (powerState, callback) {
+var that = this;
+
+if (powerState) { //turn on
+    that.synology.<span class="apidocCodeKeywordSpan">wakeUp</span>(function (err) {
+        if (!err) {
+            that.log(&#x27;Diskstation woked up!&#x27;);
+            callback(null);
+        } else {
+            that.log(&#x27;Something went wrong: &#x27; + err);
+            callback(err);
+        }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
