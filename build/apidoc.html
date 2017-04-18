@@ -81,15 +81,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.homebridge-synology.toString">
-            function <span class="apidocSignatureSpan">homebridge-synology.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-synology.</span>synology.prototype</span>
 
         </li>
@@ -248,38 +239,6 @@
     this.url = &#x27;http&#x27; + (this.secure ? &#x27;s&#x27; : &#x27;&#x27;) + &#x27;://&#x27; + this.ip + &#x27;:&#x27; + this.port;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.homebridge-synology.toString" id="apidoc.element.homebridge-synology.toString">
-        function <span class="apidocSignatureSpan">homebridge-synology.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    timeout: that.timeout,
-    qs: {
-        api: &#x27;SYNO.API.Auth&#x27;,
-        method: &#x27;login&#x27;,
-        version: 3,
-        account: that.user,
-        passwd: that.passwd,
-        session: &#x27;homebridge-synology-&#x27; + Math.random().<span class="apidocCodeKeywordSpan">toString</span>(36).replace
-(/[^a-z]+/g, &#x27;&#x27;).substr(0, 10),
-        format: &#x27;sid&#x27;
-    }
-};
-
-request.get(options, function(err, res, body) {
-    if(!err) {
-        var json = JSON.parse(body);
-...</pre></li>
     </ul>
 
 
